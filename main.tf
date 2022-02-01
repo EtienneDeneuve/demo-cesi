@@ -9,7 +9,8 @@ module "vm1" {
   vm_name        = "vm1"
   admin_username = "adminuser"
   admin_password = "P@ssword1234!"
-  subnet_id      = azurerm_subnet.front.id
+  subnet_id      = azurerm_subnet.sn3["front"].id
   rg_name        = azurerm_resource_group.rg.name
-  numberofVm = 10
+  numberofVm     = 2
+  #subnet_id      = azurerm_subnet.front.id
 }
