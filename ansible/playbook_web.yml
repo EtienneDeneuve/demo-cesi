@@ -1,7 +1,7 @@
-- name: "install WebServer on Hosts"
-  hosts: all
+- name: 'install WebServer on Hosts'
+  hosts: azure_loc_westeurope
   tasks:
-    - name: "ensure nginx is present"
-      packages:
+    - name: 'ensure nginx is present'
+      package:
         name: nginx
         state: present
