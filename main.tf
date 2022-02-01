@@ -4,36 +4,12 @@ resource "azurerm_resource_group" "rg" {
   location = "West Europe"
 }
 
-# un vm
-
-# une carte reseau
-resource "azurerm_network_interface" "nic" {
-  name                = format("%s-nic", var.naming)
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
-
-  ip_configuration {
-    name                          = "internal"
-    subnet_id                     = azurerm_subnet.back.id
-    private_ip_address_allocation = "Dynamic"
-  }
+module "vm1" {
+  source         = "./vms"
+  vm_name        = "vm1"
+  admin_username = "adminuser"
+  admin_password = "P@ssword1234!"
+  subnet_id      = azurerm_subnet.front.id
+  rg_name        = azurerm_resource_group.rg.name
+  numberofVm = 10
 }
-
-# une carte reseau
-resource "azurerm_network_interface" "nic2" {
-  name                = format("%s-nic2", var.naming)
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
-
-  ip_configuration {
-    name                          = "internal"
-    subnet_id                     = azurerm_subnet.front.id
-    private_ip_address_allocation = "Dynamic"
-  }
-}
-
-# d'un disque eventuel
-
-# ip public
-
-
