@@ -1,0 +1,7 @@
+- name: "install WebServer on Hosts"
+  hosts: all
+  tasks:
+    - name: "ensure nginx is present"
+      packages:
+        name: nginx
+        state: present
