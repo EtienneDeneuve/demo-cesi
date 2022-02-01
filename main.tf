@@ -18,6 +18,20 @@ resource "azurerm_network_interface" "nic" {
     private_ip_address_allocation = "Dynamic"
   }
 }
+
+# une carte reseau
+resource "azurerm_network_interface" "nic2" {
+  name                = format("%s-nic2", var.naming)
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
+
+  ip_configuration {
+    name                          = "internal"
+    subnet_id                     = azurerm_subnet.front.id
+    private_ip_address_allocation = "Dynamic"
+  }
+}
+
 # d'un disque eventuel
 
 # ip public
