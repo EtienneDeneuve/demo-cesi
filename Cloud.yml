@@ -1,0 +1,26 @@
+
+Cloud:
+
+- Private, Hybrid, Public
+    Private :
+        - provider, par un presta, plutot du compute on mutualise pas
+        - cloud fermé (IBM)
+    Hybrid :
+        - les deux en meme temps avec connexion entre les deux
+    Public :
+        - Dédidé grand public plutot du stockage, accessible depuis internet 
+        - Cloud ouvert a tous (avec une carte bancaire)
+    # Cloud communautaire:
+    #    - cloud privé interconnecté avec des liens securisé
+
+donner acces a des service info, 
+
+avantage:
+    - le prix sur l'infra
+    - High Availability
+    - Maintenance
+    - economie d'energie (electricité)
+    - xaas,
+        - IaaS, => Infra as a Service => grosse (pas forcement) => VPS (pas que ca )
+        - PaaS, => Platform => GitHub (oui, mais on sait pas le quel)
+        - SaaS => Software as a Service => petite (et bas non) => Microsoft 365 
