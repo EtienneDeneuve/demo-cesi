@@ -23,7 +23,7 @@ resource "azurerm_subnet" "back" {
 }
 
 resource "azurerm_subnet" "sn3" {
-  for_each             = {for subnet in var.subnet_prefixes: subnet.name => subnet}
+  for_each             = { for subnet in var.subnet_prefixes : subnet.name => subnet }
   name                 = format("%s-%s", var.naming, each.value.name)
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.vnet.name
@@ -45,6 +45,6 @@ variable "subnet_prefixes" {
       address_prefixes = ["10.0.1.0/24"]
     }
   ]
-  type = list(object({name=string, address_prefixes=list(any)}))
+  type = list(object({ name = string, address_prefixes = list(any) }))
 
 }
