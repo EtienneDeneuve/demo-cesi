@@ -1,0 +1,146 @@
+[33m#######################################################################[0m
+[33mMEGA-LINTER HAS A NEW V6 VERSION at https://github.com/oxsecurity/megalinter .
+Please upgrade your configuration by running the following command at the root of your repository (requires node.js): 
+[32mnpx mega-linter-runner --upgrade[0m[0m
+[33m#######################################################################[0m
+----------------------------------------------------------------------------------------------------
+-------------------------------------------- MegaLinter --------------------------------------------
+----------------------------------------------------------------------------------------------------
+ - Image Creation Date: 2022-07-10T08:29:57Z
+ - Image Revision: 7b2c5402f
+ - Image Version: v5
+----------------------------------------------------------------------------------------------------
+The MegaLinter documentation can be found at:
+ - https://megalinter.github.io
+----------------------------------------------------------------------------------------------------
+GITHUB_REPOSITORY: EtienneDeneuve/demo-cesi
+GITHUB_REF: refs/pull/7/merge
+GITHUB_RUN_ID: 3297265466
+
+
+[Activation] EDITORCONFIG_EDITORCONFIG_CHECKER has been set inactive, as none of these files has been found: ['.editorconfig']
+[Activation] JAVASCRIPT_ES has been set inactive, as none of these files has been found: ['.eslintrc.json', '.eslintrc.yml', '.eslintrc.yaml', '.eslintrc.js', '.eslintrc.cjs', 'package.json:eslintConfig']
+[Activation] JSX_ESLINT has been set inactive, as none of these files has been found: ['.eslintrc.json', '.eslintrc.yml', '.eslintrc.yaml', '.eslintrc.js', '.eslintrc.cjs', 'package.json:eslintConfig']
+[Activation] SQL_SQLFLUFF has been set inactive, as none of these files has been found: ['.sqlfluff']
+[Activation] SWIFT_SWIFTLINT has been set inactive, as none of these files has been found: ['.swiftlint.yml']
+[Activation] TSX_ESLINT has been set inactive, as none of these files has been found: ['.eslintrc.json', '.eslintrc.yml', '.eslintrc.yaml', '.eslintrc.js', '.eslintrc.cjs', 'package.json:eslintConfig']
+[Activation] TYPESCRIPT_ES has been set inactive, as none of these files has been found: ['.eslintrc.json', '.eslintrc.yml', '.eslintrc.yaml', '.eslintrc.js', '.eslintrc.cjs', 'package.json:eslintConfig']
+RST_RSTFMT has been temporary disabled in MegaLinter, please use a previous MegaLinter version or wait for the next one !
+Skipped linters: EDITORCONFIG_EDITORCONFIG_CHECKER, JAVASCRIPT_ES, JAVASCRIPT_PRETTIER, JSX_ESLINT, KUBERNETES_KUBECONFORM, KUBERNETES_KUBEVAL, MARKDOWN_REMARK_LINT, RST_RSTFMT, SALESFORCE_SFDX_SCANNER_APEX, SALESFORCE_SFDX_SCANNER_AURA, SALESFORCE_SFDX_SCANNER_LWC, SQL_SQLFLUFF, SWIFT_SWIFTLINT, TSX_ESLINT, TYPESCRIPT_ES, TYPESCRIPT_PRETTIER
+To receive reports as email, please set variable EMAIL_REPORTER_EMAIL
+Listing updated files in [/github/workspace] using git diff.
+Modified files:
+renovate.json
+- File extensions: , .R, .RMD, .Rmd, .bash, .c, .c++, .cc, .cdxml, .clj, .cljc, .cljs, .coffee, .cpp, .cs, .css, .cu, .cuh, .cxx, .dart, .dash, .edn, .env, .feature, .go, .gradle, .graphql, .groovy, .gvy, .h, .h++, .hcl, .hh, .hpp, .htm, .html, .hxx, .java, .js, .json, .json5, .jsonc, .ksh, .kt, .kts, .lua, .md, .nf, .p6, .php, .pl, .pl6, .pm, .pm6, .pp, .proto, .ps1, .ps1xml, .psd1, .psm1, .psrc, .pssc, .py, .r, .raku, .rakumod, .rakutest, .rb, .rs, .rst, .saas, .scala, .scss, .sh, .smk, .sql, .t, .tex, .tf, .ts, .vb, .xml, .yaml, .yml
+- File names (regex): Dockerfile, Jenkinsfile, Snakefile
+- Excluding .gitignored files [0]: 
+Kept [1] files on [1] found files
+
++----MATCHING LINTERS---------------+---------------------+----------------+------------+
+| Descriptor  | Linter              | Criteria            | Matching files | Format/Fix |
++-------------+---------------------+---------------------+----------------+------------+
+| COPYPASTE   | jscpd               |                     | project        | no         |
+| CREDENTIALS | secretlint          |                     | project        | no         |
+| GIT         | git_diff            |                     | project        | no         |
+| JSON        | jsonlint            | .json               | 1              | no         |
+| JSON        | eslint-plugin-jsonc | .json|.json5|.jsonc | 1              | yes        |
+| JSON        | v8r                 | .json               | 1              | no         |
+| JSON        | prettier            | .json               | 1              | yes        |
+| SPELL       | misspell            |                     | 1              | yes        |
+| SPELL       | cspell              |                     | 1              | no         |
++-------------+---------------------+---------------------+----------------+------------+
+
+
+[1m### Processed [CREDENTIALS] files[0m
+- Using [secretlint v4.1.0] https://megalinter.github.io/v5/descriptors/credentials_secretlint
+- MegaLinter key: [CREDENTIALS_SECRETLINT]
+- Rules config: [.secretlintrc.json]
+[32m✅ Linted [CREDENTIALS] files with [secretlint] successfully - (0.89s)[0m
+
+[1m### Processed [COPYPASTE] files[0m
+- Using [jscpd v3.3.26] https://megalinter.github.io/v5/descriptors/copypaste_jscpd
+- MegaLinter key: [COPYPASTE_JSCPD]
+- Rules config: [.jscpd.json]
+[32m✅ Linted [COPYPASTE] files with [jscpd] successfully - (0.92s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-CREDENTIALS_SECRETLINT.log
+
+[1m### Processed [GIT] files[0m
+- Using [git_diff v2.30.3] https://megalinter.github.io/v5/descriptors/git_git_diff
+- MegaLinter key: [GIT_GIT_DIFF]
+- Rules config: identified by [git_diff]
+[32m✅ Linted [GIT] files with [git_diff] successfully - (0.01s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-COPYPASTE_JSCPD.log
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-GIT_GIT_DIFF.log
+
+[1m### Processed [SPELL] files[0m
+- Using [misspell v0.3.4] https://megalinter.github.io/v5/descriptors/spell_misspell
+- MegaLinter key: [SPELL_MISSPELL]
+- Rules config: identified by [misspell]
+[misspell] renovate.json
+[32m✅ Linted [SPELL] files with [misspell] successfully - (0.06s)[0m
+
+[1m### Processed [JSON] files[0m
+- Using [jsonlint v1.6.3] https://megalinter.github.io/v5/descriptors/json_jsonlint
+- MegaLinter key: [JSON_JSONLINT]
+- Rules config: identified by [jsonlint]
+[jsonlint] renovate.json - SUCCESS - 0 error(s)
+[32m✅ Linted [JSON] files with [jsonlint] successfully - (0.23s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-SPELL_MISSPELL.log
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-JSON_JSONLINT.log
+
+[1m### Processed [SPELL] files[0m
+- Using [cspell v6.2.3] https://megalinter.github.io/v5/descriptors/spell_cspell
+- MegaLinter key: [SPELL_CSPELL]
+- Rules config: [/github/workspace/.cspell.json]
+[cspell] renovate.json
+[32m✅ Linted [SPELL] files with [cspell] successfully - (1.61s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-SPELL_CSPELL.log
+
+[1m### Processed [JSON] files[0m
+- Using [eslint-plugin-jsonc v2.3.1] https://megalinter.github.io/v5/descriptors/json_eslint_plugin_jsonc
+- MegaLinter key: [JSON_ESLINT_PLUGIN_JSONC]
+- Rules config: [.eslintrc-json.json]
+[eslint-plugin-jsonc] renovate.json
+[32m✅ Linted [JSON] files with [eslint-plugin-jsonc] successfully - (1.19s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-JSON_ESLINT_PLUGIN_JSONC.log
+
+[1m### Processed [JSON] files[0m
+- Using [v8r v0.6.1] https://megalinter.github.io/v5/descriptors/json_v8r
+- MegaLinter key: [JSON_V8R]
+- Rules config: identified by [v8r]
+[v8r] renovate.json - SUCCESS - 0 error(s)
+[32m✅ Linted [JSON] files with [v8r] successfully - (1.57s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-JSON_V8R.log
+
+[1m### Processed [JSON] files[0m
+- Using [prettier v2.7.1] https://megalinter.github.io/v5/descriptors/json_prettier
+- MegaLinter key: [JSON_PRETTIER]
+- Rules config: identified by [prettier]
+[36m[prettier] renovate.json - FIXED[0m
+[32m✅ Linted [JSON] files with [prettier] successfully - (0.46s)[0m
+[Text Reporter] Generated TEXT report: /github/workspace/report/linters_logs/SUCCESS-JSON_PRETTIER.log
+
++----SUMMARY-----+---------------------+---------------+-------+-------+--------+--------------+
+| Descriptor     | Linter              | Mode          | Files | Fixed | Errors | Elapsed time |
++----------------+---------------------+---------------+-------+-------+--------+--------------+
+| ✅ COPYPASTE   | jscpd               | project       |   n/a |       |      0 |        0.92s |
+| ✅ CREDENTIALS | secretlint          | project       |   n/a |       |      0 |        0.89s |
+| ✅ GIT         | git_diff            | project       |   n/a |       |      0 |        0.01s |
+| ✅ JSON        | eslint-plugin-jsonc | list_of_files |     1 |     0 |      0 |        1.19s |
+| ✅ JSON        | jsonlint            | file          |     1 |       |      0 |        0.23s |
+| ✅ JSON        | prettier            | list_of_files |     1 |     1 |      0 |        0.46s |
+| ✅ JSON        | v8r                 | file          |     1 |       |      0 |        1.57s |
+| ✅ SPELL       | cspell              | list_of_files |     1 |       |      0 |        1.61s |
+| ✅ SPELL       | misspell            | list_of_files |     1 |     0 |      0 |        0.06s |
++----------------+---------------------+---------------+-------+-------+--------+--------------+
+
+Identified PR#7 from environment
+[GitHub Comment Reporter] Posted summary as comment on EtienneDeneuve/demo-cesi #PR7
+[Updated Sources Reporter] copied 1 fixed source files in folder /github/workspace/report/updated_sources.
+Download it from artifacts then copy-paste it in your local repo to apply linters updates
+[33m#######################################################################[0m
+[33mMEGA-LINTER HAS A NEW V6 VERSION at https://github.com/oxsecurity/megalinter .
+Please upgrade your configuration by running the following command at the root of your repository (requires node.js): 
+[32mnpx mega-linter-runner --upgrade[0m[0m
+[33m#######################################################################[0m
+[32m✅ Successfully linted all files without errors[0m
